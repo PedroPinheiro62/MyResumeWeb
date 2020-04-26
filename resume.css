@@ -2,14 +2,30 @@ html body {
   background-color: gainsboro;
 }
 
-@media all and (max-width: 600px) {
-  .infoValue, .infoName {
-    font-size: 12px;
+@media all and (max-width: 400px) {
+  #personalData {
+    display: flex;
+    flex-direction: column;
+  }
+  #personalData #personalDataTable {
+    margin-left: 0px;
+  }
+
+  img {
+    width: 50%;
+    margin: auto;
   }
 }
-@media all and (min-width: 601px) {
-  .infoValue, .infoName {
-    font-size: 15px;
+@media all and (min-width: 401px) {
+  #personalData {
+    display: flex;
+    flex-direction: row;
+  }
+  #personalData img {
+    width: 30%;
+  }
+  #personalData #personalDataTable {
+    margin-left: 30px;
   }
 }
 #pageSelector {
@@ -40,10 +56,8 @@ html body {
 
 #infoList {
   margin-top: 40px;
-  align-items: center;
 }
 #infoList > li {
-  width: 80%;
   padding: 10px;
   border: none;
   background-color: gainsboro;
@@ -78,19 +92,11 @@ html body {
 
 #personalData {
   margin-top: 40px;
-  display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 #personalData img {
-  width: 30%;
   border-radius: 50%;
-}
-#personalData #personalDataTable {
-  border-collapse: collapse;
-  width: wrap;
-  margin-left: 30px;
 }
 #personalData #personalDataTable tr {
   align-items: center;
@@ -106,7 +112,6 @@ html body {
 
 #skillsInfo {
   margin-top: 40px;
-  width: wrap;
   align-items: center;
   justify-content: space-between;
 }

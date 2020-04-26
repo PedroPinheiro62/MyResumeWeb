@@ -5,15 +5,33 @@ html body {
     background-color: $BackGroundColor;
 }
 
-@media all and (max-width: 600px) {
-    .infoValue, .infoName {
-      font-size: 12px;
+@media all and (max-width: 400px) {
+    #personalData{
+        display: flex;
+        flex-direction: column;
+        
+        #personalDataTable{
+            margin-left: 0px;
+        }
+    }
+    img {
+        width: 50%;
+        margin: auto
     }
 }
 
-@media all and (min-width: 601px) {
-    .infoValue, .infoName {
-      font-size: 15px;
+@media all and (min-width: 401px) {
+    
+    #personalData{
+        display: flex;
+        flex-direction: row;
+
+        img {
+            width: 30%;
+        }
+        #personalDataTable{
+            margin-left: 30px;
+        }
     }
 }
 
@@ -50,10 +68,7 @@ html body {
 
 #infoList{
     margin-top: $SpaceBetweenVerticalElements;
-    align-items: center;
-    
     > li{
-        width: 80%;
         padding: 10px;
         border: none;
         background-color: $BackGroundColor;
@@ -94,21 +109,15 @@ html body {
 
 #personalData{
     margin-top: $SpaceBetweenVerticalElements;
-    display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
 
     img {
-        width: 30%;
         border-radius: 50%;
     }
 
     #personalDataTable {
-        border-collapse: collapse;
-        width: wrap;
-        margin-left: 30px;
-
+        
         tr {
             align-items: center;
             border-bottom: 1px solid black;
@@ -127,7 +136,6 @@ html body {
 
 #skillsInfo {  
     margin-top: $SpaceBetweenVerticalElements;
-    width: wrap;
     align-items: center;
     justify-content: space-between;
 
